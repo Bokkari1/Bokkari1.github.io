@@ -1,32 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            color: blueviolet;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick and Morty API</title>
+  <link rel="stylesheet" href="./static/css/styles.css">
 </head>
+
 <body>
-    <h1>Formulario con Validación</h1>
+  <div class="placeholder-container">
+    <h1 id="name-placeholder" class="character-name-placeholder"></h1>
+  </div>
     
-    <form id="miFormulario">
-        <label for="email">Correo electrónico:</label>
-        <input type="text" id="email" name="email" required>
+  <div class="grid">
+    <span class="asset top">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="line"></span>
+    </span>
+    <img class="logo" src="./static/img/rm.svg" width="280" alt="">
+    
+    <div class="navigation name">
+      <a href="#">Nombre</a>
+    </div>
+    <div id="character-name-container" class="character-name-container">
+    </div>
 
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required>
+   
 
-        <button type="submit" value="Submit"  onclick="validarFormulario()">Enviar</button>
-    </form>
+    <div id="character-image-container" class="character-image-container">
+      <!-- <img class="character-image" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt=""> -->
+    </div>
+    <div class="navigation about">
+      <a href="#">Info</a>
+    </div>
 
-    <div id="result"></div>
 
-    <script src=login.js"></script>
+    <div id="character-description-container" class="character-description-container">
+    </div>
+    <span class="asset bottom">
+      <span class="line"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </span>
+
+    <div></div>
+    <div class="learn-more">
+      <span>Más </span>
+    </div>
+
+    <div class="arrow" id="load-next"></div>
+
+  </div>
+
+  <script type="module" src="static/js/app.js"></script>
 </body>
 </html>
